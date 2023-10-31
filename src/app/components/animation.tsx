@@ -1,7 +1,8 @@
+import MatchBox from "./matchBox";
 const Animation = () => {
   return (
     <div>
-      <h1>hey</h1>
+      <MatchBox />
     </div>
   );
 };

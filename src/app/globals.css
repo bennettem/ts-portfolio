@@ -2,26 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* .opening-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #242333;
+} */
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.box {
+  position: absolute;
+  left: 42%;
+  top: 40%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.box-front {
+  position: absolute;
+  width: 200px;
+  transform: skew(55deg, -35deg);
+  background: #51aef9;
+  margin-left: 5px;
+  height: 40px;
+}
+
+.inner {
+  position: absolute;
+  width: 177px;
+  background: #fff;
+  bottom: 0px;
+  right: 0px;
+  top: 5px;
+  margin-left: 0px;
+  margin-right: 9px;
+  height: 44px;
+}
+
+.inner-side {
+  position: absolute;
+  width: 177px;
+  height: 39px;
+  background: #fff;
+  top: 8px;
+  right: 0px;
+  bottom: 0px;
+  left: 11px;
+}
+
+.inner-side::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 10px 10px;
+}
+.diamond {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid palevioletred;
+  position: absolute;
+  top: -50px;
+}
+
+.diamond:after {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 70px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid palevioletred;
+}
+
+.box-side {
+  position: absolute;
+  bottom: 50px;
+  top: 55px;
+  left: 45px;
+  width: 200px;
+  transform: skew(0, -35deg);
+  background: #3460f2;
+}
+
+.box-bottom {
+  position: absolute;
+  width: 79px;
+  transform: skew(0, 35deg);
+  background: #8ffce7;
+  margin-top: 50px;
+  right: -45px;
+  top: 47px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.side {
+  box-sizing: border-box;
+  height: 55px;
 }

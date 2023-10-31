@@ -1,7 +1,8 @@
-import Animation from "./Animation";
+import Animation from "./animation";
+
 const OpeningScreen = () => {
   return (
-    <div className="opening-screen">
+    <div className="h-screen w-full bg-page">
       <Animation />
     </div>
   );
